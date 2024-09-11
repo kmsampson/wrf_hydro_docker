@@ -20,6 +20,9 @@ WORKDIR /home/docker
 RUN /entrypoint.sh
 
 ############################
+ENV LD_LIBRARY_PATH=/usr/local/lib
+
+############################
 #Copy local setEnvar.sh script and compile WRF-Hydro using compile option 2
 COPY ./setEnvar.sh /home/docker/wrf_hydro_nwm_public/trunk/NDHMS
 RUN cd ./wrf_hydro_nwm_public/trunk/NDHMS && ./configure 2 && ./compile_offline_NoahMP.sh setEnvar.sh

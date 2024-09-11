@@ -28,6 +28,8 @@ skip ahead to Step 5.
    run this version of WRF-Hydro, so that you encorporate any new namelist or setEnvar.sh options.
 
 	 Must first run the container so it exists:
+		> docker image ls
+		> docker run <IMAGE ID>
 		> docker ps -a
 		
 	Use the name of the relevant container in the following copy commands. Below are some files that 
